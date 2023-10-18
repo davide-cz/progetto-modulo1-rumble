@@ -9,6 +9,10 @@ body {
   box-sizing: border-box;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.channel-img {
+  border-radius: 50%;
 }
 
 /*----grid setting------ */
@@ -19,7 +23,7 @@ body {
     "nav-or   nav-or"
     "nav-ver  sel-link"
     "nav-ver  main";
-  grid-template-rows: 50px 80px 1fr;
+  grid-template-rows: 70px 85px 1fr;
 }
 
 .search-nav {
@@ -40,11 +44,11 @@ main {
 /*------search navbar---------*/
 .search-nav {
   display: flex;
-  max-height: 35px;
   justify-content: space-between;
   align-content: center;
   border-bottom: 1px solid lightgray;
-  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .menu-logo {
@@ -59,15 +63,18 @@ main {
 }
 .searchbar {
   display: flex;
+  margin: auto;
 }
 .searchbar > input {
-  border: 1px solid grey;
+  border: 2px solid rgb(202, 200, 200);
   border-right: none;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+  width: 30vw;
+  height: 2.25rem;
 }
 .btn-src {
-  border: 1px solid grey;
+  border: 2px solid rgb(202, 200, 200);
   border-left: none;
   background: none;
   border-top-right-radius: 0.5rem;
@@ -76,33 +83,47 @@ main {
 .btn-src > img {
   max-height: 20px;
 }
-
+.btn-sign-in {
+  border-radius: 1.5rem;
+  background: none;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  border: none;
+}
+.btn-sign-up {
+  border-radius: 1.5rem;
+  background: none;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  border: 2px solid green;
+}
 /*-----link nav-bar------*/
 
 .link-nav {
-  max-height: auto;
-  background-color: azure;
   display: flex;
   max-width: 100%;
+  align-items: center;
   overflow-x: auto;
   gap: 1rem;
+  padding: 1rem;
 }
 .link-nav > a {
-  background-color: lightgray;
-  border-radius: 0.5rem;
+  background-color: rgb(222, 221, 221);
+  border-radius: 1rem;
   text-decoration: none;
   padding: 0.5rem;
+  flex-shrink: 0;
 }
 
 /*----navbar verticale-------*/
 
 .aside-nav {
   width: 75px;
-  background-color: burlywood;
   max-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-right: 1px solid rgb(222, 222, 222);
 }
 
 .links {
@@ -116,10 +137,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .links > div > span {
   font-size: 10px;
+  text-align: center;
 }
 .channel {
   display: flex;
@@ -137,7 +161,6 @@ main {
 .channel > img {
   height: 30px;
   width: 30px;
-  border-radius: 50%;
 }
 
 /*-----Main section-----*/
@@ -147,19 +170,46 @@ main {
 .featured-section {
   display: flex;
   align-items: center;
-  height: 40vh;
+  height: 50vh;
+  margin-bottom: 1.5rem;
 }
-
-.live-thumbnail {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 1rem;
+.featured-section > figure > img {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 1px solid yellow;
+}
+.featured-section > div > div > img {
+  border-radius: 50%;
+}
+.featured-section > div {
+  width: 30vw;
+}
+.featured-section > div > span {
+  font-size: 24px;
+  font-weight: 700;
+}
+.top-live {
+  background-color: rgb(235, 235, 235);
 }
 .main-sections-head {
   display: flex;
   padding: 1rem;
   justify-content: space-between;
+  align-items: center;
+}
+.main-sections-head > button {
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+}
+
+.live-thumbnail {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1rem;
+}
+.live-thumbnail > div > img {
+  border-radius: 0.5rem;
 }
 
 .sections-thumnails {
@@ -167,4 +217,20 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+
+.sections-thumnails > div > img {
+  border-radius: 0.5rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.author > img {
+  border: 1px solid black;
+}
+.author > span {
+  font-weight: 600;
 }
