@@ -1,0 +1,43 @@
+:root {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+/*----grid setting------ */
+
+body {
+  display: grid;
+  grid-template-areas:
+    "nav-or , nav-or"
+    "nav-ver , sel-link"
+    "nav-ver , main  ";
+}
+
+.search-nav {
+  grid-area: "nav-or";
+}
+
+.link-nav {
+  grid-area: "sel-link";
+}
+
+.aside-nav {
+  grid-area: "nav-ver";
+}
+main {
+  grid-area: "main";
+}
+/*------search navbar---------*/
+.search-nav {
+  display: flex;
+  max-height: 35px;
+}
